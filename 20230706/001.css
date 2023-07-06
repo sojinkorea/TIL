@@ -1,0 +1,28 @@
+section {
+    background-color: rgb(255, 240, 240);
+    padding:10px;
+}
+
+h1 {
+    font-size: 25px;
+    font-family:'Lucida Calligraphy';
+    color: rgb(255, 144, 187); 
+    text-align: center;
+    word-spacing: 4px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 35px;
+    font-family:'카페24 써라운드';
+    color:rgb(255, 86, 100);
+    text-align: center;
+}
+
+P {
+    font-family: 'Bell MT';
+    font-size: 20px;
+    text-indent: 15px;
+    background-color: pink;
+    padding: 10px;
+}
