@@ -33,7 +33,7 @@ p {
 .box3 {
     color: black;
     border: 3px solid rgb(237, 237, 237);
-    border-radius: 0 100px 100px 100px ;
+    border-radius: 0 100px 100px 100px;
     background: white;
     box-shadow: 15px 15px 15px 3px rgb(228, 228, 228);
 }
