@@ -1,0 +1,87 @@
+body,
+h1,
+h2,
+p {
+    margin: 0;
+}
+h1,
+h2 {
+    font: inherit;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff')
+        format('woff');
+    font-weight: 700;
+    font-style: normal;
+    }
+
+body {
+    font-family: 'Pretendard-Regular',sans-serif;
+}
+
+h1 {
+    font-family: 'Pretendard-Bold';
+    font-size: 40px;
+    font-family: Tmon몬소리;
+    padding: 15px;
+}
+article {
+    border-radius: 8px;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.10);
+    margin: 10px;
+}
+
+img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    aspect-ratio: 400/250;
+    object-fit: cover;
+}
+
+h2 {
+    font-family: 'Pretendard-Bold';
+    font-size: 30px;
+    /* 제목이 길어질 때 한줄처리 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.content {
+    color: #5A6A72;
+    font-size: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.5;
+    margin:16px 0;
+    /* box크기 고정 */
+    height: calc(20px * 1.5 *2);
+}
+
+.read {
+    font-family: 'Pretendard-Bold';
+    font-size: 23px;
+    text-decoration: underline;
+    margin-top: 50px;
+}
+
+.text-group {
+    padding: 24px 16px 16px;
+}
