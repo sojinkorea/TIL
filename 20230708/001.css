@@ -5,12 +5,13 @@ body {
 }
 
 div {
-    width: 380px;
     box-sizing: border-box;
 }
 
 p {
-    padding: 40px 0;
+    width: 380px;
+    height: 90px;
+    padding-top: 30px;
 }
 
 .box1 {
@@ -18,7 +19,6 @@ p {
     background: #343F50;
     border: 3px solid #000;
     box-shadow: 3px 3px 0 0 #4a5568 inset;
-    padding: 30px 0;
 }
 
 .box2 {
