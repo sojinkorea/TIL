@@ -129,6 +129,7 @@ h1 {
     /* 좌우 여백 각 30px */
     max-width: calc(100% - (30px * 2));
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .card-list {
