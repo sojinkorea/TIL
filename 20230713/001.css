@@ -1,0 +1,74 @@
+div {
+    margin: 10px;
+}
+
+button:enabled {
+    font-size: 12px;
+    width: 88px;
+    height: 32px;
+    border-radius: 0;
+    border: 1px solid #1a202c;
+    background-color: #343f50;
+    box-shadow: inset 1px 1px 0 0 #4a5568;
+}
+
+.btn1:enabled {
+    color: #CBD5DF;
+}
+.btn1:disabled{
+    font-size: 12px;
+    width: 88px;
+    height: 32px;
+    border-radius: 0;
+    border: 1px solid #343e4e;
+    background-color: #3a4556;
+    color: #4a5568;
+}
+.btn1:enabled:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.btn1:active {
+    color: #fff;
+    text-decoration: underline;
+    box-shadow: inset 1px 1px 0 0 #262f3e;
+}
+.btn1:disabled {
+    color: #4A5568;
+}
+
+.btn2 {
+    color: #439AFF;
+}
+.btn2:hover {
+    color: #FEFEFE;
+    background-color: #439AFF;
+    border: 1px solid #439AFF;
+    box-shadow: inset 1px 1px 0 0 #73b4ff;
+    text-decoration: underline;
+}
+.btn2:active {
+    color: #FEFEFE;
+    background-color: #439AFF;
+    border: 1px solid #439AFF;
+    box-shadow: inset 1px 1px 0 0 #3b78be;
+    text-decoration: underline;
+}
+
+.btn3 {
+    color: #EB5757;
+}
+.btn3:hover {
+    color: #FEFEFE;
+    background-color: #EB5757;
+    border-color: #EB5757;
+    text-decoration: underline;
+    box-shadow: inset 1px 1px 0 0 #FD6F6F;
+}
+.btn3:active {
+    color: #FEFEFE;
+    background-color: #EB5757;
+    border-color: #EB5757;
+    box-shadow: inset 1px 1px 0 0 #D94242;
+    text-decoration: underline;
+}
