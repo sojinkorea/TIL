@@ -13,6 +13,10 @@
   }
 }
 
+body {
+  background-color: rgba(255, 235, 230, 0.928);
+}
+
 .dog {
   display: inline-block;
   position: relative;
