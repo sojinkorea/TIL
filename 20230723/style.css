@@ -1,0 +1,50 @@
+body {
+  background-color: #eae8fe;
+  margin: 0;
+}
+
+.logo img {
+  display: block;
+  width: 386px;
+  height: 164px;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  width: 748px;
+  height: 545px;
+  gap: 20px;
+  grid-template-areas:
+    "a b"
+    "a c";
+  margin: 67px auto;
+}
+
+.machine {
+  background-color: white;
+  width: 360px;
+  grid-area: a;
+}
+
+.money {
+  background-color: white;
+  width: 360px;
+  height: 50px;
+  grid-area: b;
+}
+
+.list {
+  background-color: white;
+  width: 360px;
+  height: 474px;
+  grid-area: c;
+}
+
+.money div {
+  background-color: #eae8fe;
+  width: 306px;
+  height: 32px;
+  margin: 9px 27px;
+  border-radius: 7px;
+}
