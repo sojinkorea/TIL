@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* reset */
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3 {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  background: none;
+}
+button:enabled {
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.drama-inner img {
+  width: 180px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.drama-inner {
+  padding: 19px 20px;
+}
+
+.drama-card {
+  width: 220px;
+  height: 441px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.drama-title {
+  font-size: 16px;
+  font-weight: 900;
+  margin-top: 12px 0;
+}
+
+.drama-info {
+  font-size: 13px;
+  font-weight: 400;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+.drama-info .list {
+  color: #828282;
+}
+
+.btn-group {
+  display: flex;
+  border: 1px solid #bdbdbd;
+}
+.btn-go,
+.btn-view {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 41px;
+  font-size: 14px;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+}
+
+.btn-go {
+  display: flex;
+}

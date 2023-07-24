@@ -1,0 +1,181 @@
+body {
+  background-color: #eae8fe;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  border: 0;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  display: block;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  width: 748px;
+  height: 545px;
+  gap: 20px;
+  grid-template-areas:
+    "a b"
+    "a c";
+  margin: 67px auto;
+}
+
+.machine {
+  padding: 31px 27px;
+  display: flex;
+  background-color: white;
+  width: 360px;
+  grid-area: a;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.money {
+  background-color: white;
+  width: 360px;
+  height: 50px;
+  grid-area: b;
+}
+
+.total {
+  background-color: white;
+  width: 360px;
+  height: 474px;
+  grid-area: c;
+}
+
+.money div {
+  background-color: #eae8fe;
+  width: 306px;
+  height: 32px;
+  margin: 9px 27px;
+  border-radius: 7px;
+}
+
+.drink-list {
+  display: flex;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.drink-list img {
+  width: 35px;
+  height: 65px;
+}
+
+.drink-list span {
+  font-size: 9px;
+  color: #333;
+  font-weight: 500;
+}
+
+.drink-list strong {
+  display: flex;
+  background-color: #6327fe;
+  width: 70px;
+  height: 22px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  /* line-height: 100%; */
+}
+
+li {
+  background-color: #fff;
+  display: flex;
+  width: 94px;
+  height: 130px;
+  border: 3px solid #6327fe;
+  border-radius: 10px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.button-group {
+  display: grid;
+  grid-template-areas:
+    "d e"
+    "f g"
+    "h i";
+  gap: 11px;
+}
+
+.button-group h2 {
+  background-color: #eae8fe;
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  font-size: 14px;
+  grid-area: d;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  height: 33px;
+}
+.button-group .change {
+  grid-area: e;
+  width: 94px;
+  height: 33px;
+}
+.button-group .deposit {
+  grid-area: g;
+  width: 94px;
+  height: 32px;
+}
+.button-group .get {
+  grid-area: i;
+  width: 94px;
+  height: 106px;
+}
+.choose-list li {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  height: 134px;
+}
+
+.choose-list img {
+  width: 18px;
+  height: 33px;
+}
+
+.choose-list span {
+  font-size: 9px;
+  color: #333;
+}
+
+.choose-list strong {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
