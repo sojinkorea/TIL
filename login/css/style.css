@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body,
+h1,
+h2,
+h3,
+div,
+p,
+ul,
+li,
+section {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+img {
+  vertical-align: top;
+}
+button,
+input,
+a,
+p,
+label {
+  font: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: 0;
+}
+button:enabled {
+  cursor: pointer;
+}
+input {
+  outline: none;
+}
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+body {
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+main {
+  width: 520px;
+  height: 736px;
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+.header {
+  font-family: "SpoqaHanSansNeo-Regular";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  height: 58px;
+  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  margin: 26px 24px 0 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #c4c4c4;
+  position: relative;
+}
+.form .checkbox {
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+.title {
+  font-family: "SpoqaHanSansNeo-Regular";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.form .title {
+  margin-bottom: 24px;
+}
+.form input {
+  color: #767676;
+  display: inline-block;
+  width: 472px;
+  height: 50px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+
+  padding-left: 16px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.inp-group input:focus {
+  border: 2px solid #f4492e;
+}
+.inp-group input:focus + label {
+  display: inline-block;
+  color: #f4492e;
+  font-size: 14px;
+  margin: 1px 0 5px 4px;
+  opacity: 1;
+}
+label.focus-id,
+label.focus-pw {
+  display: none;
+}
+
+.checkbox label {
+  color: #767676;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+}
+.labl-hold::before {
+  content: "";
+  background: url(../img/check-box.svg);
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: -5px;
+  margin-right: 8px;
+}
+.inp-hold:checked {
+  background: url(../img/check-box-2.svg);
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: -5px;
+  margin-right: 8px;
+}
+input[type="checkbox"] + label {
+  cursor: pointer;
+}
+
+.btn-login {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  width: 472px;
+  height: 50px;
+  background-color: #2f80ed;
+  border-radius: 5px;
+}
+
+.form ul {
+  color: #767676;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 38px 0;
+}
+.join::after {
+  content: "|";
+  margin: 0 12px;
+}
+
+.or {
+  color: #767676;
+  font-size: 14px;
+  width: 52px;
+  position: absolute;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  top: 443px;
+  left: 233px;
+}
+
+.social-login button {
+  color: #767676;
+  font-weight: 500;
+  width: 472px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #767676;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.social-login li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-login {
+  margin-top: 29px;
+}
