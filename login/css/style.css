@@ -59,8 +59,9 @@ body {
   font-family: "SpoqaHanSansNeo-Regular";
 }
 main {
+  display: flex;
   width: 520px;
-  height: 736px;
+  flex-basis: 712px;
   background-color: #fff;
   border: 1px solid #c4c4c4;
   border-radius: 10px;
@@ -80,26 +81,28 @@ main {
   justify-content: center;
 }
 
-.form {
+.wrap {
+  /* height: 366px; */
   margin: 26px 24px 0 24px;
   box-sizing: border-box;
   border-bottom: 1px solid #c4c4c4;
   position: relative;
 }
-.form .checkbox {
+.wrap .checkbox {
   margin-top: 7px;
   margin-bottom: 20px;
 }
-.title {
+.wrap .title {
   font-family: "SpoqaHanSansNeo-Regular";
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
-}
-.form .title {
   margin-bottom: 24px;
 }
-.form input {
+.wrap.title {
+  margin-bottom: 24px;
+}
+.wrap input {
   color: #767676;
   display: inline-block;
   width: 472px;
@@ -111,7 +114,7 @@ main {
   margin-bottom: 10px;
   box-sizing: border-box;
 }
-.inp-group input:focus {
+.wrap input:focus {
   border: 2px solid #f4492e;
 }
 .inp-group input:focus + label {
@@ -164,7 +167,7 @@ input[type="checkbox"] + label {
   border-radius: 5px;
 }
 
-.form ul {
+.wrap ul {
   color: #767676;
   font-size: 14px;
   display: flex;
@@ -205,4 +208,8 @@ input[type="checkbox"] + label {
 }
 .social-login {
   margin-top: 29px;
+}
+
+btn-group {
+  margin-bottom: 15px;
 }
