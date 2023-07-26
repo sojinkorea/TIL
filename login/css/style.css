@@ -55,56 +55,64 @@ input {
   padding: 0;
   position: absolute;
 }
+
 body {
   font-family: "SpoqaHanSansNeo-Regular";
 }
+
 main {
-  display: flex;
   width: 520px;
-  flex-basis: 712px;
   background-color: #fff;
   border: 1px solid #c4c4c4;
   border-radius: 10px;
 }
 
+.form {
+  padding-bottom: 15px;
+}
 .header {
+  border-bottom: 1px solid #c4c4c4;
+}
+.header h1 {
   font-family: "SpoqaHanSansNeo-Regular";
   font-size: 16px;
+  height: 58px;
+
   font-weight: 500;
   line-height: 24px;
-  height: 58px;
-  border-bottom: 1px solid #c4c4c4;
-  border-bottom: 1px solid #c4c4c4;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.wrap {
+.btn-close {
+  display: flex;
+  background-color: blue;
+  width: 16px;
+  height: 16px;
+
+  background-size: cover;
+  background-image: url(../img/close.svg);
+  margin-left: auto;
+}
+.login-group {
   /* height: 366px; */
-  margin: 26px 24px 0 24px;
+  margin: 26px 24px 29px 24px;
   box-sizing: border-box;
   border-bottom: 1px solid #c4c4c4;
-  position: relative;
 }
-.wrap .checkbox {
-  margin-top: 7px;
-  margin-bottom: 20px;
-}
-.wrap .title {
+.login-group .title {
   font-family: "SpoqaHanSansNeo-Regular";
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   margin-bottom: 24px;
 }
-.wrap.title {
-  margin-bottom: 24px;
-}
-.wrap input {
+
+.inp-group input {
   color: #767676;
-  display: inline-block;
+  /* display: inline-block; */
   width: 472px;
   height: 50px;
   border: 1px solid #c4c4c4;
@@ -114,7 +122,20 @@ main {
   margin-bottom: 10px;
   box-sizing: border-box;
 }
-.wrap input:focus {
+.inp-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* .form input,
+.form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.login-group input:focus {
   border: 2px solid #f4492e;
 }
 .inp-group input:focus + label {
@@ -129,11 +150,16 @@ label.focus-pw {
   display: none;
 }
 
+.login-group .checkbox {
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
 .checkbox label {
   color: #767676;
-  position: relative;
+  /* position: relative; */
   font-size: 16px;
   font-weight: 500;
+  display: flex;
 }
 .labl-hold::before {
   content: "";
@@ -144,7 +170,7 @@ label.focus-pw {
   vertical-align: -5px;
   margin-right: 8px;
 }
-.inp-hold:checked {
+.inp-hold:checked + .labl-hold::before {
   background: url(../img/check-box-2.svg);
   width: 22px;
   height: 22px;
@@ -156,7 +182,7 @@ input[type="checkbox"] + label {
   cursor: pointer;
 }
 
-.btn-login {
+.btn-login button {
   color: #fff;
   font-size: 18px;
   font-weight: 700;
@@ -166,32 +192,38 @@ input[type="checkbox"] + label {
   background-color: #2f80ed;
   border-radius: 5px;
 }
+.btn-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.wrap ul {
+.login-group ul {
   color: #767676;
   font-size: 14px;
   display: flex;
   justify-content: center;
-  margin: 20px 0 38px 0;
+  margin: 20px 0 20px 0;
 }
 .join::after {
   content: "|";
   margin: 0 12px;
 }
 
-.or {
+.login-group::after {
+  content: "또는";
   color: #767676;
   font-size: 14px;
   width: 52px;
-  position: absolute;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  top: 443px;
-  left: 233px;
+  position: relative;
+  background-color: white;
+  display: block;
+  text-align: center;
+  left: 44%;
+  bottom: -10px;
 }
 
-.social-login button {
+.btn-group button {
   color: #767676;
   font-weight: 500;
   width: 472px;
@@ -201,15 +233,21 @@ input[type="checkbox"] + label {
   border-radius: 5px;
   margin-bottom: 10px;
 }
-.social-login li {
+.btn-group li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.social-login {
-  margin-top: 29px;
-}
 
-btn-group {
-  margin-bottom: 15px;
+.btn-group .facebook {
+  border: 1px solid #2d9cdb;
+}
+.btn-group .naver {
+  border: 1px solid #00bf18;
+}
+.btn-group .facebook {
+  border: 1px solid #2d9cdb;
+}
+.btn-group .kakaotalk {
+  border: 1px solid #f2c94c;
 }
