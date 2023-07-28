@@ -60,7 +60,7 @@ body {
   font-family: "SpoqaHanSansNeo-Regular";
 }
 
-main {
+form {
   width: 520px;
   background-color: #fff;
   border: 1px solid #c4c4c4;
@@ -70,10 +70,10 @@ main {
 .form {
   padding-bottom: 15px;
 }
-.header {
+.head {
   border-bottom: 1px solid #c4c4c4;
 }
-.header h1 {
+.head h1 {
   font-family: "SpoqaHanSansNeo-Regular";
   font-size: 16px;
   height: 58px;
@@ -86,33 +86,28 @@ main {
   justify-content: center;
 }
 
-.btn-close {
-  display: flex;
-  background-color: blue;
-  width: 16px;
-  height: 16px;
-
-  background-size: cover;
-  background-image: url(../img/close.svg);
-  margin-left: auto;
-}
 .login-group {
+  width: 482px;
   /* height: 366px; */
-  margin: 26px 24px 29px 24px;
+  margin: 26px auto 29px auto;
   box-sizing: border-box;
   border-bottom: 1px solid #c4c4c4;
 }
-.login-group .title {
+
+.title h2 {
   font-family: "SpoqaHanSansNeo-Regular";
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   margin-bottom: 24px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .inp-group input {
   color: #767676;
-  /* display: inline-block; */
+  display: flex;
   width: 472px;
   height: 50px;
   border: 1px solid #c4c4c4;
@@ -122,27 +117,16 @@ main {
   margin-bottom: 10px;
   box-sizing: border-box;
 }
-.inp-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/* .form input,
-.form button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .login-group input:focus {
   border: 2px solid #f4492e;
+  margin: 0;
 }
 .inp-group input:focus + label {
   display: inline-block;
   color: #f4492e;
   font-size: 14px;
-  margin: 1px 0 5px 4px;
+  margin: 6px 0 10px 4px;
   opacity: 1;
 }
 label.focus-id,
@@ -250,4 +234,41 @@ input[type="checkbox"] + label {
 }
 .btn-group .kakaotalk {
   border: 1px solid #f2c94c;
+}
+
+.btn-group .icon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../img/icon_sprites.png);
+  /* 이미지 압축 (1/2) */
+  background-size: 116px 83px;
+  margin-left: 9px;
+}
+
+.btn-group .google::before {
+  width: 22px;
+  height: 22px;
+  background-position: -52px -10px;
+  /* background: url("images_login/icon_google.png") no-repeat; */
+}
+.btn-group .facebook::before {
+  height: 24px;
+  width: 16px;
+  background-position: -90px -9px;
+  /* background: url("images_login/icon_facebook.png") center no-repeat; */
+}
+.btn-group .naver::before {
+  width: 22px;
+  height: 22px;
+  background-position: -10px -10px;
+  /* background: url("images_login/icon_naver.png") no-repeat; */
+}
+.btn-group .kakaotalk::before {
+  width: 22px;
+  height: 22px;
+  background-position: -10px -52px;
+  /* background: url("images_login/icon_kakao.png") no-repeat; */
 }
