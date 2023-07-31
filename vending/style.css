@@ -1,16 +1,44 @@
-body {
-  background-color: #eae8fe;
+/* reset */
+body,
+h1,
+h2,
+p,
+ul,
+button {
+  padding: 0;
   margin: 0;
 }
-h1 {
-  margin: 0;
-  border: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
 }
 ul,
 li {
   list-style: none;
-  padding: 0;
-  margin: 0;
+}
+img {
+  vertical-align: top;
+}
+input {
+  font: inherit;
+}
+button {
+  font: inherit;
+  border: 0;
+  background: none;
+}
+
+button:enabled {
+  cursor: pointer;
+}
+
+body {
+  background-color: #eae8fe;
+  font-family: "Noto Sans KR";
 }
 
 .btn {
@@ -33,42 +61,44 @@ li {
   margin: 0 auto;
 }
 
-.container {
+main {
   display: grid;
   width: 748px;
-  height: 545px;
+  /* height: 545px; */
   gap: 20px;
   grid-template-areas:
-    "a b"
-    "a c";
+    "section1 section2"
+    "section1 section3";
   margin: 67px auto;
+  /* grid-template-columns: repeat(2, 1fr); */
 }
 
-.machine {
-  padding: 31px 27px;
+.section1 {
+  padding: 31px 27px 24px 27px;
   display: flex;
   background-color: white;
   width: 360px;
-  grid-area: a;
-  flex-shrink: 0;
+  height: 545px;
+  grid-area: section1;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
-.money {
+.section2 {
   background-color: white;
   width: 360px;
   height: 50px;
-  grid-area: b;
+  grid-area: section2;
 }
 
-.total {
+.section3 {
   background-color: white;
   width: 360px;
   height: 474px;
-  grid-area: c;
+  grid-area: section3;
 }
 
-.money div {
+.section2 div {
   background-color: #eae8fe;
   width: 306px;
   height: 32px;
@@ -78,10 +108,14 @@ li {
 
 .drink-list {
   display: flex;
-  gap: 7px;
-  flex-shrink: 0;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
+.drink-list .on {
+  border: 3px solid #6327fe;
+  box-sizing: border-box;
+}
 .drink-list img {
   width: 35px;
   height: 65px;
@@ -89,7 +123,6 @@ li {
 
 .drink-list span {
   font-size: 9px;
-  color: #333;
   font-weight: 500;
 }
 
@@ -107,55 +140,85 @@ li {
   /* line-height: 100%; */
 }
 
-li {
+.drink-list li {
   background-color: #fff;
   display: flex;
   width: 94px;
   height: 130px;
-  border: 3px solid #6327fe;
   border-radius: 10px;
-  flex-shrink: 0;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 6px;
 }
 
-.button-group {
-  display: grid;
-  grid-template-areas:
-    "d e"
-    "f g"
-    "h i";
-  gap: 11px;
+.bg-box p {
+  font-weight: 700;
 }
-
-.button-group h2 {
+.bg-box {
   background-color: #eae8fe;
   border-radius: 5px;
   padding: 6px 10px;
-  display: flex;
+
   font-size: 14px;
-  grid-area: d;
+  font-weight: 500;
+
+  display: flex;
   align-items: center;
   justify-content: space-between;
+
   width: 200px;
   height: 33px;
+  box-sizing: border-box;
 }
-.button-group .change {
-  grid-area: e;
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px 12px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#input-money {
+  border: 1px solid #bdbdbd;
+  height: 32px;
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+#input-money::placeholder {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+.btn {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
   width: 94px;
   height: 33px;
+  font-size: 13px;
+  font-weight: 500;
 }
-.button-group .deposit {
-  grid-area: g;
-  width: 94px;
-  height: 32px;
-}
-.button-group .get {
-  grid-area: i;
+
+.btn-get {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 5px;
+
+  background: #6327fe;
   width: 94px;
   height: 106px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.choose-list {
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
 }
 .choose-list li {
   display: flex;
@@ -178,4 +241,12 @@ li {
   color: #000;
   font-size: 14px;
   font-weight: 500;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: auto calc((100% - (12px * 2)) / 3);
+  grid-template-rows: 33px 33px 106px;
+  gap: 12px;
+  margin-top: 20px;
 }
