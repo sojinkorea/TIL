@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "SpoqaHanSansNeo-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -13,7 +13,9 @@ div,
 p,
 ul,
 li,
-section {
+section,
+header,
+main {
   margin: 0;
   padding: 0;
 }
@@ -57,24 +59,24 @@ input {
 }
 
 body {
-  font-family: "SpoqaHanSansNeo-Regular";
+  font-family: 'SpoqaHanSansNeo-Regular';
 }
 
-form {
+.wrap {
   width: 520px;
   background-color: #fff;
   border: 1px solid #c4c4c4;
   border-radius: 10px;
-}
-
-.form {
   padding-bottom: 15px;
 }
-.head {
+
+header {
+  position: relative;
   border-bottom: 1px solid #c4c4c4;
+  display: flex;
 }
-.head h1 {
-  font-family: "SpoqaHanSansNeo-Regular";
+header .title {
+  font-family: 'SpoqaHanSansNeo-Regular';
   font-size: 16px;
   height: 58px;
 
@@ -83,19 +85,27 @@ form {
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin: auto;
 }
 
-.login-group {
-  width: 482px;
-  /* height: 366px; */
-  margin: 26px auto 29px auto;
+button.close {
+  background: url(../img/close.svg) no-repeat center;
+  width: 16px;
+  height: 16px;
+  padding: 20px;
+
+  position: absolute;
+  right: 0;
+  box-sizing: content-box;
+}
+
+.form {
+  padding: 26px 22px 0 22px;
   box-sizing: border-box;
-  border-bottom: 1px solid #c4c4c4;
 }
 
-.title h2 {
-  font-family: "SpoqaHanSansNeo-Regular";
+.text {
+  font-family: 'SpoqaHanSansNeo-Regular';
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
@@ -107,18 +117,17 @@ form {
 
 .inp-group input {
   color: #767676;
-  display: flex;
-  width: 472px;
-  height: 50px;
+  display: block;
+  width: 100%;
   border: 1px solid #c4c4c4;
   border-radius: 5px;
 
-  padding-left: 16px;
+  padding: 15px 16px;
   margin-bottom: 10px;
   box-sizing: border-box;
 }
 
-.login-group input:focus {
+.form input:focus {
   border: 2px solid #f4492e;
   margin: 0;
 }
@@ -134,7 +143,7 @@ label.focus-pw {
   display: none;
 }
 
-.login-group .checkbox {
+.form .checkbox {
   margin-top: 16px;
   margin-bottom: 20px;
 }
@@ -146,7 +155,7 @@ label.focus-pw {
   display: flex;
 }
 .labl-hold::before {
-  content: "";
+  content: '';
   background: url(../img/check-box.svg);
   width: 22px;
   height: 22px;
@@ -162,7 +171,7 @@ label.focus-pw {
   vertical-align: -5px;
   margin-right: 8px;
 }
-input[type="checkbox"] + label {
+input[type='checkbox'] + label {
   cursor: pointer;
 }
 
@@ -172,7 +181,7 @@ input[type="checkbox"] + label {
   font-weight: 700;
   line-height: 22px;
   width: 472px;
-  height: 50px;
+  padding: 14px;
   background-color: #2f80ed;
   border-radius: 5px;
 }
@@ -182,42 +191,47 @@ input[type="checkbox"] + label {
   justify-content: center;
 }
 
-.login-group ul {
+.form ul {
   color: #767676;
   font-size: 14px;
   display: flex;
   justify-content: center;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 38px 0;
 }
 .join::after {
-  content: "|";
+  content: '|';
   margin: 0 12px;
 }
 
-.login-group::after {
-  content: "또는";
+.social-group {
+  padding: 0 24px;
+}
+.social-group hr {
+  border: none;
+  border-top: 1px solid #c4c4c4;
+  overflow: visible;
+  text-align: center;
+}
+hr::after {
+  content: '또는';
   color: #767676;
   font-size: 14px;
-  width: 52px;
   position: relative;
   background-color: white;
-  display: block;
-  text-align: center;
-  left: 44%;
-  bottom: -10px;
+  padding: 0 13px;
+  top: -12px;
 }
-
-.btn-group button {
+.social-group button {
   color: #767676;
   font-weight: 500;
   width: 472px;
-  height: 50px;
   background-color: #fff;
   border: 1px solid #767676;
   border-radius: 5px;
+  padding: 15px;
   margin-bottom: 10px;
 }
-.btn-group li {
+.social-group li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -226,18 +240,18 @@ input[type="checkbox"] + label {
 .btn-group .facebook {
   border: 1px solid #2d9cdb;
 }
-.btn-group .naver {
+.social-group .naver {
   border: 1px solid #00bf18;
 }
-.btn-group .facebook {
+.social-group .facebook {
   border: 1px solid #2d9cdb;
 }
-.btn-group .kakaotalk {
+.social-group .kakaotalk {
   border: 1px solid #f2c94c;
 }
 
-.btn-group .icon::before {
-  content: "";
+.social-group .icon::before {
+  content: '';
   position: absolute;
   display: block;
   width: 22px;
@@ -248,25 +262,25 @@ input[type="checkbox"] + label {
   margin-left: 9px;
 }
 
-.btn-group .google::before {
+.social-group .google::before {
   width: 22px;
   height: 22px;
   background-position: -52px -10px;
-  /* background: url("images_login/icon_google.png") no-repeat; */
+  /* background: url('images_login/icon_google.png') no-repeat; */
 }
-.btn-group .facebook::before {
+.social-group .facebook::before {
   height: 24px;
   width: 16px;
   background-position: -90px -9px;
   /* background: url("images_login/icon_facebook.png") center no-repeat; */
 }
-.btn-group .naver::before {
+.social-group .naver::before {
   width: 22px;
   height: 22px;
   background-position: -10px -10px;
   /* background: url("images_login/icon_naver.png") no-repeat; */
 }
-.btn-group .kakaotalk::before {
+.social-group .kakaotalk::before {
   width: 22px;
   height: 22px;
   background-position: -10px -52px;

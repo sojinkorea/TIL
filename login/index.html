@@ -4,21 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>login modal</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <form class="form">
-      <div class="head">
-        <h1>로그인 또는 회원가입</h1>
-        <!-- <button type="button" class="btn-close"></button> -->
-      </div>
-      <!-- <div class="wrap"> -->
-      <div class="login-group">
-        <div class="title">
-          <h2>위니브에서 여러분의 궁금증을 해결하세요! :)</h2>
-        </div>
-
+    <main class="wrap">
+      <header>
+        <h2 class="a11y-hidden">회원가입, 로그인 또는 소셜서비스로 로그인</h2>
+        <h3 class="title">로그인 또는 회원가입</h3>
+        <button class="close"></button>
+      </header>
+      <form class="form">
+        <p class="text">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+        <!-- 필드셋 -->
         <div class="inp-group">
           <div>
             <input type="email" id="user-id" placeholder="아이디" />
@@ -36,7 +34,7 @@
           <label for="check" class="labl-hold">로그인 상태 유지</label>
         </div>
 
-        <div class="btn-login"><button type="button">로그인</button></div>
+        <div class="btn-login"><button type="submit">로그인</button></div>
 
         <ul>
           <li>
@@ -46,10 +44,11 @@
             <a href="#" class="find">아이디/비밀번호 찾기</a>
           </li>
         </ul>
-      </div>
+      </form>
 
-      <h3 class="a11y-hidden">소셜서비스로 로그인</h3>
-      <div class="btn-group">
+      <div class="social-group">
+        <h3 class="a11y-hidden">소셜서비스로 로그인</h3>
+        <hr />
         <ul>
           <li>
             <button type="button" class="icon google">구글 계정으로 로그인</button>
@@ -65,7 +64,6 @@
           </li>
         </ul>
       </div>
-      <!-- </div> -->
-    </form>
+    </main>
   </body>
 </html>
