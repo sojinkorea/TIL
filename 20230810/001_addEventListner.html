@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>addEventListner</title>
+  </head>
+  <body>
+    <div class="hello">
+      <h1>Click me!</h1>
+    </div>
+    <script>
+      const title = document.querySelector('div.hello:first-child h1');
+
+      function handleTitleClick() {
+        title.style.color = 'blue';
+      }
+      function handleMouseEnter() {
+        title.innerText = 'Mouse is here';
+      }
+      function handleMouseLeave() {
+        title.innerText = 'Mouse is gone!';
+      }
+
+      title.addEventListener('click', handleTitleClick);
+      title.addEventListener('mouseenter', handleMouseEnter);
+      title.addEventListener('mouseleave', handleMouseLeave);
+    </script>
+  </body>
+</html>
