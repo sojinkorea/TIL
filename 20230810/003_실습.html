@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>addEventListener 연습</title>
+  </head>
+  <body>
+    <h2>Hello</h2>
+    <script>
+      const h2 = document.querySelector('h2');
+
+      const superEventHandler = {
+        mouseEnter: function () {
+          h2.style.color = '#9b59b6';
+          h2.innerHTML = 'The mouse is here!';
+        },
+        mouseLeave: function () {
+          h2.style.color = '#1abc9c';
+          h2.innerHTML = 'The mouse is gone!';
+        },
+        rightMouseClick: function () {
+          h2.style.color = '#e74c3c';
+          h2.innerHTML = 'That was a right click!';
+        },
+        windowResize: function () {
+          h2.style.color = '#3498db';
+          h2.innerHTML = 'You just resized!';
+        },
+      };
+
+      h2.addEventListener('contextmenu', superEventHandler.rightMouseClick);
+      h2.addEventListener('mouseenter', superEventHandler.mouseEnter);
+      h2.addEventListener('mouseleave', superEventHandler.mouseLeave);
+      window.addEventListener('resize', superEventHandler.windowResize);
+    </script>
+  </body>
+</html>
