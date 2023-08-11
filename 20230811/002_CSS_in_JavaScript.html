@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>CSS in JavaScript 2</title>
+  </head>
+  <body>
+    <div class="hello">
+      <h1>Click me!</h1>
+    </div>
+    <script>
+      const h1 = document.querySelector('div.hello:first-child h1');
+
+      function handleTitleClick() {
+        const clickedClass = 'clicked';
+
+        if (h1.className === clickedClass) {
+          h1.className = '';
+        } else {
+          h1.className = clickedClass;
+        }
+      }
+
+      h1.addEventListener('click', handleTitleClick);
+    </script>
+  </body>
+</html>

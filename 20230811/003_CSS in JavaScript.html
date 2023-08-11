@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>CSS in JavaScript 3</title>
+  </head>
+  <body>
+    <div class="hello">
+      <h1 class="font">Click me!</h1>
+    </div>
+    <script>
+      const h1 = document.querySelector('div.hello:first-child h1');
+
+      function handleTitleClick() {
+        // const clickedClass = 'clicked';
+        // if (h1.classList.contains(clickedClass)) {
+        //   h1.classList.remove(clickedClass);
+        // } else {
+        //   h1.classList.add(clickedClass);
+        // }
+
+        h1.classList.toggle('clicked');
+      }
+
+      h1.addEventListener('click', handleTitleClick);
+    </script>
+  </body>
+</html>
