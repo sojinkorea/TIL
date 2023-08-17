@@ -2,7 +2,7 @@ const clockTitle = document.querySelector('.js-clock');
 
 function dayCalculator() {
   const date = new Date();
-  const christmas = new Date('2023-12-25');
+  const christmas = new Date(`${new Date().getFullYear()}-12-25:00:00:00+0900`);
 
   const diff = christmas - date;
 
